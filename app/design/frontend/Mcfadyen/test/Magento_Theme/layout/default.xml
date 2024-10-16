@@ -1,0 +1,17 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+    
+        <move element="logo" destination="header.panel" before="-"/>
+        <move element="catalog.topnav" destination="header.panel" after="logo"/>
+        <move element="minicart" destination="header.panel" after="-"/>
+
+        <!-- Remove the default search block -->
+        <referenceBlock name="top.search" remove="true"/>
+		<referenceBlock name="advanced-search-link" remove="true"/>
+        <referenceBlock name="register-link" remove="true" />           <!--for Create Account Link-->
+        <referenceBlock name="authorization-link" remove="true" />      <!--for Sign In Link  -->
+        <referenceBlock name="wish-list-link" remove="true" />
+        <referenceBlock name="top.links" remove="true" />
+ 
+    </body>
+</page>

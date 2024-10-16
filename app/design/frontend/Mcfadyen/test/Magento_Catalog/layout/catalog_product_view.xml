@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="3columns" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <!-- Move Wishlist to Product Media -->
+        <move element="view.addto.wishlist" destination="product.info.media" before="skip_gallery_before.wrapper"/>
+
+        <!-- Move Price and Product Info to Sidebar Additional -->
+        <move element="product.info.price" destination="sidebar.additional" after="page.main.title"/>
+        <move element="product.info" destination="sidebar.additional" after="page.main.title"/>
+        <move element="page.main.title" destination="sidebar.additional"/>
+
+        <!-- Organize Product Details -->
+        <move element="product.info.details" destination="product.info.main"/>
+        <move element="product.info.overview" destination="columns" after="product.info.main"/>
+
+        <!-- Move Related Products Block after Sidebar-Additional -->
+        <move element="catalog.product.related" destination="columns" after="sidebar-additional"/>
+
+        <!-- Remove Unwanted Blocks -->
+        <referenceBlock name="wishlist_sidebar" remove="true"/>
+        <referenceBlock name="breadcrumbs" remove="true"/>
+        <referenceBlock name="catalog.compare.sidebar" remove="true"/>
+        <referenceBlock name="product.info.review" remove="true"/>
+        <referenceBlock name="product.info.social" remove="true"/>
+        <referenceBlock name="product.info.stock.sku" remove="true"/>
+        <referenceContainer name="footer" remove="true" />
+    </body>
+</page>
+

@@ -1,0 +1,298 @@
+@font-family__base: 'Roboto', sans-serif;
+
+body {
+    font-family: @font-family__base;
+}
+.action{
+    &.advanced{
+        display: none;
+    }
+}
+.page-main{
+    max-width: 1440px;
+    .columns{
+        max-width: 98%;
+        .column{
+            &.main{
+                .product-info-main{
+                    float: left;
+                    .product{
+                        &.info{
+                            &.detailed{
+                                .items{
+                                    .data{
+                                        &.item{
+                                            &.title{
+                                                a{
+                                                    font-family: 'Helvetica Now Text','Helvetica Neue', Helvetica;
+                                                    font-size: 14px;
+                                                    font-weight: 400;
+                                                    line-height: 16.8px;
+                                                    text-align: left;
+                                                    border:none;
+                                                    background-color: transparent;
+                                                    text-transform: uppercase;
+                                                    padding: 5px 10px 5px 10px;
+
+                                                }
+                                            }
+                                            &.content{
+                                                border: none;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .product.media{
+                    .desktop-image-gallery {
+                        .desktop-gallery-image-container{
+                            display: inline-block;
+                        }
+                    }
+                    .action.towishlist{
+                        position: fixed;
+                        float: right;
+                        right: 25%;
+                        z-index: 1;
+                        span::before{
+                            font-family: 'icons-blank-theme';
+                            content: '\e601';
+                            font-size: 40px;
+                            color: #000;
+                            -webkit-font-smoothing: antialiased;
+                            -moz-osx-font-smoothing: grayscale;
+                            line-height: 24px;
+                            vertical-align: middle;
+                            display: inline-block;
+                            font-weight: normal;
+                            overflow: hidden;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+        .sidebar-additional {
+            .page-title{
+                font-size: 48px;
+                font-weight: 400;
+                color: #000;
+                margin-bottom: 10px;
+            }
+            .product-info-price{
+                .price-box{
+                    font-size: 14px;
+                    font-weight: 700;
+                    color: #000;
+                    margin-bottom: 30px;
+                    .price-label {
+                        display: none;
+                    }
+                }
+            }
+            .box-tocart{
+                .field{
+                    &.qty{
+                        display: none;
+                    }
+                }
+                .tocart{
+                    padding: 15px;
+                    text-transform: uppercase;
+                }
+                .actions{
+                    button{
+                        width: 100%;
+                        border-radius: 50px;
+                        color: #fff;
+                        background-color: #000;
+                        border: 1px solid #000;
+                    }
+                }
+            }
+            
+            .product-add-form{
+                .product-options-wrapper{
+                        .fieldset{
+                            span{
+                                color: #000;
+                            }
+                            .swatch-option {
+
+                                &.image{
+                                    min-width: 50px;
+                                    min-height: 60px;
+                                    border-radius: 0px;
+                                    border: 1px solid #E5E5E5;
+                                    &.selected{
+                                        border: 1px solid #000;
+                                    }
+                                }
+                                 &.text{
+                                    background-color: #fff;
+                                    border-radius: 100px;
+                                    color: #000;
+                                    border: 1px solid #E5E5E5;
+                                    padding: 5px 20px;
+                                    outline: none;
+                                    &.selected{
+                                        background-color: #000;
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                    }
+                }
+                .product-options-bottom{
+                    .box-tocart{
+                        display: block;
+                        .fieldset{
+                            .actions{
+                                display: block;
+                                button{
+                                        width: 100%;
+                                        border-radius: 50px;
+                                        color: #fff;
+                                        background-color: #000;
+                                        border: 1px solid #000;
+                                        font-size: 1.4rem;
+                                        line-height: 1.6rem;
+                                    }
+                                }
+                            }
+                        
+                    }
+                }
+            }
+        }
+        .product.attribute.overview{
+            font-size: 32px;
+            color: #000;
+            text-align: center;
+            font-weight: 400;
+            order: 2;
+            padding: 0 300px;
+        }
+        .block.related{
+            order: 3;
+        }
+    }
+
+}
+
+@media screen and (min-width:769px) {
+    .page-main {
+        .columns{
+            .column{
+                &.main{
+                    width: 75.666667%;
+                    padding: 0;
+                    .product-info-main{
+                        width: 34%;
+                        position: sticky;
+                        top: 50px;
+                        z-index: 2;
+                        .price-label {
+                            display: none;
+                        }
+                    }
+                    .product{
+                        &.media{
+                            .gallery-placeholder{
+                                display: none!important;
+                            }
+                            width: 66%;
+                            margin: 0;
+                            .action{
+                                &.towishlist{
+                                    top: 125px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .sidebar-additional {
+                width: 23.666667%;
+                position: sticky;
+                top: 50px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .page-main {
+        .columns{
+            .product{
+                &.attribute{
+                    &.overview{
+                        font-size: 20px;
+                        margin-top: 30px;
+                        padding: 0;
+                    }
+                }
+            }
+            .sidebar-additional{
+                .page-title{
+                    font-size: 32px;
+                }
+            }
+            .column{
+                &.main{
+                    .product-info-main{
+                        display: none;
+                    }
+                    .product{
+                        &.media{
+                            .fotorama__nav__frame{
+                                padding: 0px 5px;
+                                .fotorama__dot{
+                                    width: 16px;
+                                    height: 2px;
+                                    background-color: #E5E5E5;
+                                }
+                                &.fotorama__active{
+                                    background-color: #000;
+                                    border-color: #000;
+                                }
+                            }
+                            .desktop-image-gallery {
+                                display: none!important;
+                            }
+                            .action{
+                                &.towishlist{
+                                    right: 0;
+                                    top: 45px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .page-main {
+        .columns{
+            .column{
+                &.main{
+                    .product{
+                        &.media{
+                            .action{
+                                &.towishlist{
+                                    right: 30%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
