@@ -3,7 +3,7 @@ Magento community-edition:2.4.6
 Installation guide
 https://www.cloudways.com/blog/install-magento-2-composer/
 
-
+https://drive.google.com/file/d/1Rh_ks5-znw5E2_vQYUmd-X6-xc8SZdqr/view?usp=drive_link
 
 bin/magento sampledata:deploy 
 bin/magento module:disable Magento_TwoFactorAuth Magento_AdminAdobeImsTwoFactorAuth
